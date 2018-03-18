@@ -1,0 +1,36 @@
+.chat {
+
+    &-type {
+        display: flex;
+        justify-content: flex-start;
+
+    }
+}
+
+.button {
+    position: relative;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+
+    &__view {
+        height: $ui-height-defaul;
+        padding: 0 15px;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__indicator {
+        position: absolute;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        background-color: #ff0b00;
+        border-radius: 100%;
+        top: 0;
+        right: 0;
+    }
+}
