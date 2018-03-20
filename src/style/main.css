@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Phage Regular KG';
+  src: url(../font/PhageRegularKG.ttf); }
+
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
@@ -371,32 +375,112 @@ td,
 th {
   padding: 0; }
 
-.chat-type {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  font-family: 'Phage Regular KG', sans-serif; }
+
+.chat {
+  margin: 20px;
+  max-width: 800px;
+  border: 10px solid #08538c;
+  background-color: #08538c;
+  border-right-width: 5px; }
+  .chat-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 20px; }
+  .chat-list {
+    margin-bottom: 10px; }
+  .chat-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px; }
+    .chat-content .messages {
+      width: calc(80% - 10px);
+      height: 400px;
+      background-color: lightgray;
+      margin-right: 10px;
+      padding: 15px; }
+      .chat-content .messages .message__nickname {
+        color: #0099cc;
+        font-size: 16px;
+        font-weight: bold; }
+    .chat-content .emojies {
+      width: calc(20% - 10px);
+      min-width: 150px;
+      background-color: greenyellow; }
+  .chat-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .chat-form .input-text {
+      width: calc(80% - 10px);
+      margin-right: 10px;
+      height: 40px;
+      padding: 0 10px;
+      font-size: 18px; }
+    .chat-form .button {
+      width: calc(20% - 10px); }
+      .chat-form .button__text {
+        color: #fff; }
 
 .button {
   position: relative;
   border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: none; }
+  outline: none;
+  background-color: gray; }
+  .button:not(:last-child) {
+    margin-right: 10px; }
+  .button.active {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 10px 1px red;
+            box-shadow: 0px 0px 10px 1px red; }
   .button__view {
-    height: 44px;
-    padding: 0 15px; }
+    height: 24px;
+    padding: 0 15px;
+    font-size: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .button__view:hover {
       opacity: 0.5; }
   .button__indicator {
     position: absolute;
     color: #fff;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     font-size: 12px;
     background-color: #ff0b00;
     border-radius: 100%;
-    top: 0;
-    right: 0; }
+    bottom: -7px;
+    right: -7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: 'Arial', sans-serif; }
+  .button--send {
+    background-color: #de0f17;
+    min-width: 150px; }
+    .button--send:hover {
+      background-color: #ff424a; }
+    .button--send:active {
+      background-color: #ab0000; }
